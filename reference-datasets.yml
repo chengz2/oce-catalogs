@@ -18,6 +18,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-gx1v7-annual-all:
     description: World Ocean Atlas 2018 all data average
@@ -31,6 +32,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-tx0.66v1-annual-all:
     description: World Ocean Atlas 2018 all data average
@@ -45,6 +47,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-tx2_3v2-annual-all:
     description: World Ocean Atlas 2018 all data average
@@ -59,6 +62,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-tx2_0-annual-all:
     description: World Ocean Atlas 2018 all data average
@@ -73,6 +77,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-tx2_3v2-monthly-all:
     description: World Ocean Atlas 2018 monthly average climatology
@@ -87,6 +92,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   woa-2018-tx1_4v1-annual-all:
     description: World Ocean Atlas 2018 all data average
@@ -101,6 +107,7 @@ sources:
       chunks: {}
       xarray_kwargs:
         decode_times: False
+        engine: netcdf4
 
   geothermal:
     description: Geothermal heat flow from Davies, 2013, re-gridded to OM4_025
@@ -111,6 +118,8 @@ sources:
       version: 2013
     args:
       urlpath: '/glade/campaign/cgd//oce/datasets/obs/geothermal/geothermal_davies2013_ncar.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   moc-rapid:
     description: MOC vertical profile estimate from RAPID array at 26°N
@@ -119,12 +128,16 @@ sources:
       prefix: moc
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/RAPID/moc_vertical.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   transports-rapid:
     description: Water mass transports from RAPID array at 26°N
     driver: netcdf
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/RAPID/moc_transports.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   moc-core2-26p5:
     description: AMOC time series data @ 26N; 5th cycle used in Danabasoglu et al., doi:10.1016/j.ocemod.2015.11.007
@@ -133,6 +146,8 @@ sources:
       prefix: moc
     args:
       urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.26p5.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   moc-core2-45:
     description: AMOC time series data @ 45N; 5th cycle used in Danabasoglu et al., doi:10.1016/j.ocemod.2015.11.007
@@ -141,6 +156,8 @@ sources:
       prefix: moc
     args:
       urlpath: '/glade/campaign/cesm/community/omwg/amoc/COREII_AMOC_papers/papers/COREII.variability/data.original/AMOCts.cyc5.45.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   moc-pop-jra-26:
     description: AMOC time series data from POP JRA 55 @ 26N
@@ -149,6 +166,8 @@ sources:
       prefix: moc
     args:
       urlpath: '/glade/u/home/bryan/MOM6-modeloutputanalysis/AMOC_series_26n.g210.GIAF_JRA.v13.gx1v7.01.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   moc-pop-jra-45:
     description: AMOC time series data from POP JRA55 @ 45N
@@ -157,6 +176,8 @@ sources:
       prefix: moc
     args:
       urlpath: '/glade/u/home/gmarques/Notebooks/POP/MOC/AMOC_series_45n.g210.GIAF_JRA.v13.gx1v7.01.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   PHC2-tx0.66v1:
     description: PHC2 climatology
@@ -171,6 +192,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   eq-uvts-johnson:
     description: Johnson et al (2001) climatology
@@ -181,6 +203,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   eke-global-ni-et-al-2023:
     description: Ni et al (2023) EKE climatology
@@ -191,6 +214,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   sla-aviso-native:
     description: Aviso Sea Level Anomalies referenced to the [1993, 2012] period (native, 0.25 deg)
@@ -205,6 +229,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   adt-aviso-tx2_3v2:
     description: AVISO Absolute Dynamic Topography (ADT) averaged from 1993 to 2000 and remaped to tx2_3v2
@@ -215,6 +240,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/aviso/aviso_adt_to_tx2_3v2.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   sla-rms-aviso-tx0.66v1:
     description: RMS AVISO sea level anomaly climatology
@@ -228,6 +255,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   mld-mimoc-tx0.66v1:
     description: MIMOC MLD climatology
@@ -242,6 +270,7 @@ sources:
       xarray_kwargs:
         decode_coords: False
         decode_times: False
+        engine: netcdf4
 
   rg-argo-2018:
     description: Roemmich-Gilson Argo Annual mean Climatology
@@ -253,6 +282,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/obs/RG_ArgoClim/RG_ArgoClim_TS.200401-201812.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-argo-tx0.66v1:
     description: Argo MLD climatology from Holte et al. 2017 remapped to tx0.66v1
@@ -264,6 +295,8 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/MLD/Argo/ARGO_MLD_remapped_to_tx06v1.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-argo-native:
     description: Argo MLD climatology, native (1 deg)
@@ -274,6 +307,8 @@ sources:
       url: 'http://mixedlayer.ucsd.edu/'
     args:
       urlpath: '/glade/work/dcherian/datasets/argomld/Argo_mixedlayers_monthlyclim_03172021.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-deboyer-2023-native:
     description: De Boyer Montegut 2023 MLD climatology (native 1 deg), https://doi.org/10.17882/91774
@@ -285,6 +320,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2023/mld_dr003_ref10m.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-deboyer-2004-native:
     description: De Boyer Montegut 2004 MLD climatology (native 1 deg), https://cerweb.ifremer.fr/deboyer/mld/Surface_Mixed_Layer_Depth.php
@@ -296,6 +333,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2004/mld_DR003_c1m_reg2.0.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-deboyer-tx0.66v1:
     description: De Boyer Montegut MLD climatology remaped to tx0.66v1
@@ -307,6 +346,8 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/MLD/deBoyer/deBoyer_MLD_remapped_to_tx06v1.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-deboyer-tx2_3v2:
     description: De Boyer Montegut MLD climatology remaped to tx2_3v2
@@ -318,6 +359,21 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx2_3.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
+
+  mld-deboyer-2023-tx2_3v2:
+    description: De Boyer Montegut 2023 MLD climatology remaped to tx2_3v2
+    driver: netcdf
+    metadata:
+      grid: tx2_3v2
+      frequency: monthly
+      version: 2023
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/mld/deBoyer2023/deBoyer23_MLD_remapped_to_tx2_3.nc'
+      chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   mld-deboyer-tx1_4v1:
     description: De Boyer Montegut MLD climatology remaped to tx1_4v1
@@ -329,6 +385,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx1_4/mld/deBoyer2004/deBoyer04_MLD_remapped_to_tx1_4.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   oisstv2-tx2_3v2:
     description: Monthly OISSTv2 remapped to tx2_3v2
@@ -340,6 +398,8 @@ sources:
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/oisst/oisstv2_to_tx2_3v2.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   pht-trenberth-caron:
     description: Trenberth & Caron poleward heat transport estimate
@@ -350,6 +410,8 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/Trenberth_and_Caron_Heat_Transport.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   pht-pop-jra-gx1v7:
     description: Poleward heat transport estimate from POP 31 year mean (years 29-59)
@@ -361,6 +423,8 @@ sources:
     args:
       urlpath: '/glade/u/home/gmarques/Notebooks/POP/MHT/MHT_mean.g210.GIAF_JRA.v13.gx1v7.01.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   pht-jra:
     description: Poleward heat transport estimate based on the JRA-55 v1.3 forcing (Tsujino et al, 2019)
@@ -371,6 +435,8 @@ sources:
     args:
       urlpath: '/glade/work/gmarques/cesm/datasets/Heat_transport/jra55fcst_v1_3_annual_1x1/nht_jra55do_v1_3.nc'
       chunks: {}
+      xarray_kwargs:
+        engine: netcdf4
 
   # copepod-gx1v7:
   #   description: Copepod biomass
@@ -393,6 +459,8 @@ sources:
       version: 2021
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/obs/tpxo_tides/u_tpxo9.v5a.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   tidal-dissipation-jayne-native:
     description: Estimated tidal dissipation data by S.R. Jayne. WHOI. (native, 0.5 deg)
@@ -403,6 +471,8 @@ sources:
       version: 2006
     args:
       urlpath: '/glade/campaign/cgd/oce/datasets/obs/tidal_dissipation/energy_new.nc'
+      xarray_kwargs:
+        engine: netcdf4
 
   florida-current-cable:
     description: Florida Current cable transport estimate
@@ -413,3 +483,6 @@ sources:
       version: 2020
     args:
       urlpath: '/glade/work/fredc/OBS/Florida_Current/FC_cable_transport_1982-2020.nc'
+      xarray_kwargs:
+        engine: netcdf4
+
