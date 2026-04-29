@@ -318,7 +318,7 @@ sources:
       frequency: monthly
       version: 2022
     args:
-      urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2023/mld_dr003_ref10m.nc'
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/mld/deBoyer_2023/mld_dr003_ref10m_v2023.nc'
       chunks: {}
       xarray_kwargs:
         engine: netcdf4
@@ -396,10 +396,20 @@ sources:
       frequency: monthly
       version: 2019
     args:
-      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/oisst/oisstv2_to_tx2_3v2.nc'
+      urlpath: '/glade/campaign/cgd/oce/datasets/cesm/tx2_3/oisst/oisstv2_to_tx2_3v3_260306.nc'
       chunks: {}
       xarray_kwargs:
         engine: netcdf4
+
+  pht-johns-2023:
+    description: Atlantic Meridional Overturning Circulation (AMOC) Heat Transport Time Series between April 2004 and December 2020 at 26.5 N
+    driver: netcdf
+    metadata:
+      frequency: daily
+      version: 2023
+    args:
+      urlpath: '/glade/campaign/cgd/oce/datasets/obs/johns_2023_mht/mocha_mht_data_ERA5_v2020.nc'
+      chunks: {}
 
   pht-trenberth-caron:
     description: Trenberth & Caron poleward heat transport estimate
